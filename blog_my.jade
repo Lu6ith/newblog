@@ -1,0 +1,339 @@
+doctype html
+html(lang='en')
+head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title ARMblog
+    //
+       CSS 
+    link(href='css/bootstrap.min.css', rel='stylesheet', media='screen')
+    link(href='css/font-awesome.min.css', rel='stylesheet', media='screen')
+    link(href='css/animate.min.css', rel='stylesheet', media='screen')
+    link(href='css/lightbox.css', rel='stylesheet', media='screen')
+    link(href='css/syntax/shCore.css', rel='stylesheet', media='screen')
+    link(href='css/syntax/shThemeDefault.css', rel='stylesheet', media='screen')
+    link(href='css/style.css', rel='stylesheet', media='screen', title='default')
+    link(href='css/color-default.css', rel='stylesheet', media='screen', title='default')
+    link(href='css/width-full.css', rel='stylesheet', media='screen', title='default')
+    //
+       HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries 
+    //if lt IE 9
+      script(src='js/html5shiv.js')
+      script(src='js/respond.min.js')
+  body
+    .boxed.animated.fadeIn.animation-delay-5
+      header#header.hidden-xs
+        .container
+          #header-title
+            h1.animated.fadeInDown
+              a(href='index.html')
+                | ARM
+                span blog
+            p.animated.fadeInLeft Blog nie tylko a ARM-ach...
+          #social-header.hidden-xs
+            a.social-icon.soc-twitter.animated.fadeInDown.animation-delay-1(href='#')
+              i.fa.fa-twitter
+            a.social-icon.soc-google-plus.animated.fadeInDown.animation-delay-2(href='#')
+              i.fa.fa-google-plus
+            a.social-icon.soc-facebook.animated.fadeInDown.animation-delay-3(href='#')
+              i.fa.fa-facebook
+            a.social-icon.soc-github.animated.fadeInDown.animation-delay-7(href='#')
+              i.fa.fa-github
+        //
+           container 
+      //
+         header 
+      nav.navbar.navbar-static-top.navbar-mind(role='navigation')
+        .container
+          //
+             Brand and toggle get grouped for better mobile display 
+          .navbar-header
+            a.navbar-brand.visible-xs(href='index.html')
+              | ARM
+              span blog
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-mind-collapse')
+              span.sr-only Toggle navigation
+              i.fa.fa-bars.fa-inverse
+          //
+             Collect the nav links, forms, and other content for toggling 
+          .collapse.navbar-collapse.navbar-mind-collapse
+            ul.nav.navbar-nav
+              li.dropdown
+                a.dropdown-toggle(href='#') Home 
+              //
+                 dropdown 
+              li.dropdown
+                a.dropdown-toggle(href='#') O mnie 
+              //
+                 dropdown 
+              li.dropdown.active
+                a.dropdown-toggle(href='#') Blog 
+              //
+                 dropdown 
+              li.dropdown
+                a.dropdown-toggle(href='#', data-toggle='dropdown')
+                  | Galerie
+                  b.caret
+                ul.dropdown-menu
+                  li
+                    a(href='portfolio.html') Podroze
+                  li
+                    a(href='portfolio2.html') Przyroda
+                  li
+                    a(href='portfolio_item.html') Ania
+              //
+                 dropdown 
+            //
+               nav nabvar-nav 
+          //
+             navbar-collapse 
+        //
+           container 
+      //
+         navbar navbar-default 
+      header.wrap-title
+        .container
+          h1.page-title Blog
+          ol.breadcrumb.hidden-xs
+            li
+              a(href='#') Home
+            li.active Blog
+      .container
+        .row
+          .col-md-8
+            article.post.animated.fadeInLeft.animation-delay-8
+              .panel.panel-default
+                .panel-body
+                  h3.post-title
+                    a.transicion(href='single.html') Lorem ipsum Minim Ut in nulla labore sint nostrud
+                  .row
+                    .col-lg-6
+                      img.img-post.img-responsive(src='img/7.jpg', alt='Image')
+                    .col-lg-6
+                      p
+                        | Enim velit Duis eu voluptate do tempor non irure nisi ad occaecat dolore aliqua laboris amet aute minim qui et Excepteur ide cupidatat Duis laborum id nulla in mollit consectetur animal Ut veniam magna ut exercitation ex sint sint ex sit est pariatur non nisi eu est magna ullamco minim nulla aliquip reprehenderit Lorem ipsum Minim Ut in nulla labore sint nostrud commodo.
+                .panel-footer
+                  .row
+                    .col-lg-10.col-md-9.col-sm-8
+                      i.fa.fa-clock-o
+                      | Sep 29, 2013
+                      i.fa.fa-user  
+                      a(href='#') Patrick
+                      i.fa.fa-folder-open
+                      a(href='#') Portfolio
+                      | ,
+                      a(href='#') Design
+                      | .
+                    .col-lg-2.col-md-3.col-sm-4
+                      a.pull-right(href='#') Read more »
+            //
+               post 
+            section
+              ul.pagination
+                li.disabled
+                  a(href='#') «
+                li.active
+                  a(href='#')
+                    | 1
+                    span.sr-only (current)
+                li
+                  a(href='#') 2
+                li
+                  a(href='#') 3
+                li
+                  a(href='#') 4
+                li
+                  a(href='#') 5
+                li
+                  a(href='#') 6
+                li
+                  a(href='#') 7
+                li
+                  a(href='#') 8
+                li
+                  a(href='#') 9
+                li
+                  a(href='#') 10
+                li
+                  a(href='#') »
+          //
+             col-md-8 
+          .col-md-4
+            aside.sidebar
+              .block
+                ul#myTab2.nav.nav-tabs
+                  li.active
+                    a(href='#fav', data-toggle='tab')
+                      i.fa.fa-star
+                  li
+                    a(href='#categories', data-toggle='tab')
+                      i.fa.fa-folder-open
+                  li
+                    a(href='#archive', data-toggle='tab')
+                      i.fa.fa-clock-o
+                  li
+                    a(href='#tags', data-toggle='tab')
+                      i.fa.fa-tags
+                .tab-content
+                  #fav.tab-pane.active
+                    h3.post-title Favorite Post
+                    ul.media-list
+                      li.media
+                        a.pull-left(href='#')
+                          img.media-object(src='img/m2.jpg', width='80', height='80', alt='image')
+                        .media-body
+                          p.media-heading
+                            a(href='#') Lorem ipsum dolor sit amet aut consectetur adipisicing elitl libero
+                          small Sep, 28 2013
+                      li.media
+                        a.pull-left(href='#')
+                          img.media-object(src='img/m9.jpg', width='80', height='80', alt='image')
+                        .media-body
+                          p.media-heading
+                            a(href='#') Lorem ipsum dolor sit amet in consectetur adipisicing consequuntur
+                          small Oct, 9 2013
+                      li.media
+                        a.pull-left(href='#')
+                          img.media-object(src='img/m12.jpg', width='80', height='80', alt='image')
+                        .media-body
+                          p.media-heading
+                            a(href='#') Sit amet consectetur adipisicing elit incidunt minus
+                          small Dec, 30 2013
+                  #categories.tab-pane
+                    h3.post-title Categories
+                    ul.simple
+                      li
+                        a(href='#') Game Programming
+                      li
+                        a(href='#') Artificial Intelligence
+                        ul
+                          li
+                            a(href='#') Artificial Life
+                          li
+                            a(href='#') Neural Networks
+                      li
+                        a(href='#') Resources
+                      li
+                        a(href='#') Web Developer
+                  #archive.tab-pane
+                    h3.post-title Archives
+                    ul.simple
+                      li
+                        a(href='#') December 2012
+                      li
+                        a(href='#') January 2013
+                      li
+                        a(href='#') February 2013
+                      li
+                        a(href='#') March 2013
+                      li
+                        a(href='#') April 2013
+                  #tags.tab-pane
+                    h3.post-title Tags
+                    .tags-cloud
+                      a.tag(href='#') Web
+                      a.tag(href='#') Artificial Intelligence
+                      a.tag(href='#') Programing
+                      a.tag(href='#') Design
+                      a.tag(href='#') 3D
+                      a.tag(href='#') Games
+                      a.tag(href='#') Resources
+                      a.tag(href='#') 2D
+                      a.tag(href='#') C++
+                      a.tag(href='#') Jquery
+                      a.tag(href='#') Javascript
+                      a.tag(href='#') Library
+                      a.tag(href='#') Windows
+                      a.tag(href='#') Linux
+                      a.tag(href='#') Cloud
+                      a.tag(href='#') Game developer
+                      a.tag(href='#') Server
+                      a.tag(href='#') Google
+                      a.tag(href='#') Bootstrap
+                      a.tag(href='#') Less
+                      a.tag(href='#') Sass
+                      a.tag(href='#') Engine
+                      a.tag(href='#') Node.js
+                //
+                   tab-content 
+              .panel.panel-primary
+                .panel-heading
+                  i.fa.fa-align-left
+                  | Widget Text
+                .panel-body
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atomus, appellat dedocendi omnes quoddam atomos. Vestra. Corrupti sensum multa dissentiet uberius displicet medeam, efficiatur quaeque saluto sollicitare arbitraretur conectitur chaere, deorum consiliisque arbitrer doctrina nasci. Odia malis, scipio, libido. Iudico graviter seditione hoc. Venustate.
+            //
+               Sidebar 
+        //
+           row 
+      //
+         container  
+      aside#footer-widgets
+        .container
+          .row
+            .col-md-6
+              h3.footer-widget-title Sitemap
+              ul.list-unstyled.three_cols
+                li
+                  a(href='#') Home
+                li
+                  a(href='#') Blog
+                li
+                  a(href='#') Works
+                li
+                  a(href='#') Gallery
+                li
+                  a(href='#') About Us
+                li
+                  a(href='#') Cantact
+              h3.footer-widget-title Subscribe
+              p
+                | Lorem ipsum Amet fugiat elit nisi anim mollit in labore ut esse Duis ullamco ad dolor veniam velit lorem ipsum dolor sit amet, consectetur adipisicing..
+              .input-group
+                input.form-control(type='text', placeholder='Email Adress')
+                span.input-group-btn
+                  button.btn.btn-success(type='button') Subscribe
+              //
+                 /input-group 
+            .col-md-6
+              .footer-widget
+                h3.footer-widget-title Recent Works
+                .row
+                  .col-lg-6.col-md-6.col-sm-3.col-xs-6
+                    a.thumbnail(href='#')
+                      img.img-responsive(src='img/wf1.jpg', alt='Image')
+                  .col-lg-6.col-md-6.col-sm-3.col-xs-6
+                    a.thumbnail(href='#')
+                      img.img-responsive(src='img/wf2.jpg', alt='Image')
+          //
+             row 
+        //
+           container 
+      //
+         footer-widgets 
+      footer#footer
+        p
+          | © 2014
+          a(href='#') Wojciech Lubicz-Łapinski
+          | All rights reserved.
+    //
+       boxed 
+    #back-top
+      a(href='#header')
+        i.fa.fa-chevron-up
+    //
+       Scripts 
+    script(src='js/jquery-1.10.2.min.js')
+    script(src='js/jquery.cookie.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/jquery.mixitup.min.js')
+    script(src='js/lightbox-2.6.min.js')
+    script(src='js/holder.js')
+    script(src='js/app.js')
+    script(src='js/styleswitcher.js')
+    script(src='js/syntax/shCore.js')
+    script(src='js/syntax/shBrushXml.js')
+    script(src='js/syntax/shBrushJScript.js')
+    script(type='text/javascript')
+      SyntaxHighlighter.all()
