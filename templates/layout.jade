@@ -60,11 +60,11 @@ html(lang='en')
           .collapse.navbar-collapse.navbar-mind-collapse
             ul.nav.navbar-nav
               li.dropdown
-                a.dropdown-toggle(href='#') Home 
+                a.dropdown-toggle(href='/') Home 
               //
                  dropdown 
               li.dropdown
-                a.dropdown-toggle(href='#') O mnie 
+                a.dropdown-toggle(href='/about/') O mnie 
               //
                  dropdown 
               li.dropdown.active
@@ -72,7 +72,7 @@ html(lang='en')
               //
                  dropdown 
               li.dropdown
-                a.dropdown-toggle(href='#', data-toggle='dropdown')
+                a.dropdown-toggle(href='/galerie/', data-toggle='dropdown')
                   | Galerie
                   b.caret
                 ul.dropdown-menu
@@ -82,6 +82,10 @@ html(lang='en')
                     a(href='portfolio2.html') Przyroda
                   li
                     a(href='portfolio_item.html') Ania
+              //
+                 dropdown 
+              li.dropdown
+                a.dropdown-toggle(href='/contact/') Kontakt 
               //
                  dropdown 
             //
