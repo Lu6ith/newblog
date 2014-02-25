@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  each article in articles
+    - var content = article.html.replace(/<[^>]+>/g, '')
+    - var pl = moment.lang('pl')
+    - var data = moment(article.date).lang('pl').format(' MMM DD, YYYY')
+
+    article.post.animated.fadeInLeft.animation-delay-8
+      .panel.panel-default
+        .panel-body
+          h3.post-title
+            a.transicion(href=article.url)= article.title
+          .row
+            .col-lg-6
+              img.img-post.img-responsive(src='/img/7.jpg', alt='Image')
+            .col-lg-6
+              p!= content.substr(0, 500 + content.substr(500).search(/\W/)) + ' ...'
+        .panel-footer
+          .row
+            .col-lg-10.col-md-9.col-sm-8
+              i.fa.fa-clock-o
+              | #{data}
+              i.fa.fa-user  
+              a(href='#')= article.metadata.author
+              i.fa.fa-folder-open
+              a(href='#') Portfolio
+              | ,
+              a(href='#') Design
+              | .
+            .col-lg-2.col-md-3.col-sm-4
+              a.pull-right(href=article.url) Czytaj dalej »
+    //
+       post 
+  section
+    ul.pagination
+      if prevPage
+        li
+          a(href=prevPage.url) «
+            span.sr-only (current)
+      if nextPage      
+        li
+          a(href=nextPage.url) »

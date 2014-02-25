@@ -1,0 +1,42 @@
+extends layout
+
+block append vars
+  - var bodyclass = 'article'
+  - var fullUrl = locals.url + page.url
+
+block prepend title
+  | #{ page.title + " • "}
+
+block content
+  - var data = moment(page.date).lang('pl').format(' MMM DD, YYYY')
+  section
+    h2.post-title= page.title
+    .col-lg-10.col-md-9.col-sm-8
+      i.fa.fa-clock-o
+      | #{data}
+      |  
+      i.fa.fa-user  
+      |   
+      a(href='#')= page.metadata.author
+      |   
+      i.fa.fa-folder-open
+      |   
+      a(href='#') Portfolio
+      | ,
+      a(href='#') Design
+      | .
+    img.img-responsive.imageborder(src='/img/7.jpg', alt='Image')
+    p!= page.html
+
+  section
+    h2.post-title Comments
+    div#disqus_thread
+
+  script.
+    var disqus_shortname = 'myarmblog'; // required: replace example with your forum shortname
+
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();

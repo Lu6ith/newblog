@@ -1,25 +1,26 @@
 doctype html
 html(lang='en')
-head
+  head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title ARMblog
     //
        CSS 
-    link(href='css/bootstrap.min.css', rel='stylesheet', media='screen')
-    link(href='css/font-awesome.min.css', rel='stylesheet', media='screen')
-    link(href='css/animate.min.css', rel='stylesheet', media='screen')
-    link(href='css/lightbox.css', rel='stylesheet', media='screen')
-    link(href='css/syntax/shCore.css', rel='stylesheet', media='screen')
-    link(href='css/syntax/shThemeDefault.css', rel='stylesheet', media='screen')
-    link(href='css/style.css', rel='stylesheet', media='screen', title='default')
-    link(href='css/color-default.css', rel='stylesheet', media='screen', title='default')
-    link(href='css/width-full.css', rel='stylesheet', media='screen', title='default')
+    link(href='/css/bootstrap.min.css', rel='stylesheet', media='screen')
+    link(href='/css/font-awesome.min.css', rel='stylesheet', media='screen')
+    link(href='/css/animate.min.css', rel='stylesheet', media='screen')
+    link(href='/css/lightbox.css', rel='stylesheet', media='screen')
+    link(href='/css/syntax/shCore.css', rel='stylesheet', media='screen')
+    link(href='/css/syntax/shThemeDefault.css', rel='stylesheet', media='screen')
+    link(href='/css/style.css', rel='stylesheet', media='screen', title='default')
+    link(href='/css/color-default.css', rel='stylesheet', media='screen', title='default')
+    link(href='/css/width-boxed.css', rel='stylesheet', media='screen', title='default')
+    link(href='/css/mystyle.css', rel='stylesheet', media='screen', title='default')
     //
        HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries 
     //if lt IE 9
-      script(src='js/html5shiv.js')
-      script(src='js/respond.min.js')
+      script(src='/js/html5shiv.js')
+      script(src='/js/respond.min.js')
   body
     .boxed.animated.fadeIn.animation-delay-5
       header#header.hidden-xs
@@ -96,66 +97,12 @@ head
           h1.page-title Blog
           ol.breadcrumb.hidden-xs
             li
-              a(href='#') Home
+              a(href='/') Home
             li.active Blog
       .container
         .row
           .col-md-8
-            article.post.animated.fadeInLeft.animation-delay-8
-              .panel.panel-default
-                .panel-body
-                  h3.post-title
-                    a.transicion(href='single.html') Lorem ipsum Minim Ut in nulla labore sint nostrud
-                  .row
-                    .col-lg-6
-                      img.img-post.img-responsive(src='img/7.jpg', alt='Image')
-                    .col-lg-6
-                      p
-                        | Enim velit Duis eu voluptate do tempor non irure nisi ad occaecat dolore aliqua laboris amet aute minim qui et Excepteur ide cupidatat Duis laborum id nulla in mollit consectetur animal Ut veniam magna ut exercitation ex sint sint ex sit est pariatur non nisi eu est magna ullamco minim nulla aliquip reprehenderit Lorem ipsum Minim Ut in nulla labore sint nostrud commodo.
-                .panel-footer
-                  .row
-                    .col-lg-10.col-md-9.col-sm-8
-                      i.fa.fa-clock-o
-                      | Sep 29, 2013
-                      i.fa.fa-user  
-                      a(href='#') Patrick
-                      i.fa.fa-folder-open
-                      a(href='#') Portfolio
-                      | ,
-                      a(href='#') Design
-                      | .
-                    .col-lg-2.col-md-3.col-sm-4
-                      a.pull-right(href='#') Read more »
-            //
-               post 
-            section
-              ul.pagination
-                li.disabled
-                  a(href='#') «
-                li.active
-                  a(href='#')
-                    | 1
-                    span.sr-only (current)
-                li
-                  a(href='#') 2
-                li
-                  a(href='#') 3
-                li
-                  a(href='#') 4
-                li
-                  a(href='#') 5
-                li
-                  a(href='#') 6
-                li
-                  a(href='#') 7
-                li
-                  a(href='#') 8
-                li
-                  a(href='#') 9
-                li
-                  a(href='#') 10
-                li
-                  a(href='#') »
+            block content
           //
              col-md-8 
           .col-md-4
@@ -180,21 +127,21 @@ head
                     ul.media-list
                       li.media
                         a.pull-left(href='#')
-                          img.media-object(src='img/m2.jpg', width='80', height='80', alt='image')
+                          img.media-object(src='/img/m2.jpg', width='80', height='80', alt='image')
                         .media-body
                           p.media-heading
                             a(href='#') Lorem ipsum dolor sit amet aut consectetur adipisicing elitl libero
                           small Sep, 28 2013
                       li.media
                         a.pull-left(href='#')
-                          img.media-object(src='img/m9.jpg', width='80', height='80', alt='image')
+                          img.media-object(src='/img/m9.jpg', width='80', height='80', alt='image')
                         .media-body
                           p.media-heading
                             a(href='#') Lorem ipsum dolor sit amet in consectetur adipisicing consequuntur
                           small Oct, 9 2013
                       li.media
                         a.pull-left(href='#')
-                          img.media-object(src='img/m12.jpg', width='80', height='80', alt='image')
+                          img.media-object(src='/img/m12.jpg', width='80', height='80', alt='image')
                         .media-body
                           p.media-heading
                             a(href='#') Sit amet consectetur adipisicing elit incidunt minus
@@ -302,10 +249,10 @@ head
                 .row
                   .col-lg-6.col-md-6.col-sm-3.col-xs-6
                     a.thumbnail(href='#')
-                      img.img-responsive(src='img/wf1.jpg', alt='Image')
+                      img.img-responsive(src='/img/wf1.jpg', alt='Image')
                   .col-lg-6.col-md-6.col-sm-3.col-xs-6
                     a.thumbnail(href='#')
-                      img.img-responsive(src='img/wf2.jpg', alt='Image')
+                      img.img-responsive(src='/img/wf2.jpg', alt='Image')
           //
              row 
         //
@@ -324,16 +271,16 @@ head
         i.fa.fa-chevron-up
     //
        Scripts 
-    script(src='js/jquery-1.10.2.min.js')
-    script(src='js/jquery.cookie.js')
-    script(src='js/bootstrap.min.js')
-    script(src='js/jquery.mixitup.min.js')
-    script(src='js/lightbox-2.6.min.js')
-    script(src='js/holder.js')
-    script(src='js/app.js')
-    script(src='js/styleswitcher.js')
-    script(src='js/syntax/shCore.js')
-    script(src='js/syntax/shBrushXml.js')
-    script(src='js/syntax/shBrushJScript.js')
+    script(src='/js/jquery-1.10.2.min.js')
+    script(src='/js/jquery.cookie.js')
+    script(src='/js/bootstrap.min.js')
+    script(src='/js/jquery.mixitup.min.js')
+    script(src='/js/lightbox-2.6.min.js')
+    script(src='/js/holder.js')
+    script(src='/js/app.js')
+    script(src='/js/styleswitcher.js')
+    script(src='/js/syntax/shCore.js')
+    script(src='/js/syntax/shBrushXml.js')
+    script(src='/js/syntax/shBrushJScript.js')
     script(type='text/javascript')
       SyntaxHighlighter.all()
