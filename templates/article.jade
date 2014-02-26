@@ -9,23 +9,25 @@ block prepend title
 
 block content
   - var data = moment(page.date).lang('pl').format(' MMM DD, YYYY')
-  section
+  section.post
     h2.post-title= page.title
-    .col-lg-10.col-md-9.col-sm-8
-      i.fa.fa-clock-o
-      | #{data}
-      |  
-      i.fa.fa-user  
-      |   
-      a(href='#')= page.metadata.author
-      |   
-      i.fa.fa-folder-open
-      |   
-      a(href='#') Portfolio
-      | ,
-      a(href='#') Design
-      | .
-    img.img-responsive.imageborder(src='/img/7.jpg', alt='Image')
+    .row.well.well-sm
+      .col-lg-12.col-md-11.col-sm-10
+        i.fa.fa-clock-o
+        | #{data}
+        |  
+        i.fa.fa-user  
+        |   
+        a(href='#')= page.metadata.author
+        |   
+        i.fa.fa-tags
+        |   
+        a(href='#') Web
+        | ,
+        a(href='#') Javascript
+        | .
+      //
+        img.img-responsive.imageborder(src='/img/7.jpg', alt='Image')
     p!= page.html
 
   section
